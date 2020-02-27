@@ -10,4 +10,4 @@ sleep 2
 docker build -t spring-mysql .
 echo "==================== Build Docker Image ================"
 sleep 2
-docker run -p 9090:8080 --name spring-mysql --link mysql-pipeline:mysql spring-mysql
+docker run -p 9090:8080 --name spring-mysql --link mysql-jenkins:mysql spring-mysql
