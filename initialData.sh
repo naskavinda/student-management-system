@@ -1,0 +1,1 @@
+docker run --name mysql-pipeline -p 3308:3306 -e MYSQL_ROOT_PASSWORD=1234 -e MYSQL_DATABASE=student_management -d mysql:5.6
