@@ -1,4 +1,5 @@
-FROM openjdk:8
+FROM maven:3.6.1
+
 ARG JAR_FILE=target/*.jar
 COPY ${JAR_FILE} app.jar
 EXPOSE 8080

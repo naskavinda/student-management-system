@@ -1,13 +1,14 @@
 pipeline {
-  agent master
+  agent {
+  docker {
+              image 'maven:3-alpine'
+          }
+  }
   stages {
     stage('Compile Stage') {
       steps {
-        withMaven(maven: 'M3') {
           sh 'mvn clean install -DskipTests'
-        }
-
-      }
+       }
     }
 
   }
