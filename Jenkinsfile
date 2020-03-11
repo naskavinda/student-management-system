@@ -1,13 +1,16 @@
 pipeline {
   agent {
-    dockerfile true
+  docker {
+              image 'maven:3-alpine'
+          }
   }
   stages {
     stage('Compile Stage') {
-      steps {
-          sh 'mvn clean install -DskipTests'
-          sh 'echo $PWD'
-       }
+            steps {
+                sh 'mvn clean install -DskipTests'
+                sh 'echo $PWD'
+          }
     }
+
   }
 }
