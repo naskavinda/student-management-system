@@ -1,3 +1,4 @@
+#!/usr/bin/env bash
 docker rm spring-mysql
 echo "==================== Remove Docker Container =============="
 sleep 1

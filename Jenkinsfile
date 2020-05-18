@@ -8,7 +8,7 @@ pipeline {
     stage('Compile Stage') {
             steps {
                 sh 'mvn clean install -DskipTests'
-                sh 'echo $PWD'
+//                 sh 'echo $PWD'
           }
     }
 
