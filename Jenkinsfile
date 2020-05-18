@@ -1,12 +1,12 @@
 pipeline {
-    agent any
-    tools {
-        maven 'M3-3.6.3'
-    }
+    agent { dockerfile true }
+//     tools {
+//         maven 'M3-3.6.3'
+//     }
     stages {
         stage('Build') {
             steps {
-                sh 'mvn clean -DskipTests install'
+                sh 'building.....'
             }
         }
         stage('Test') {
