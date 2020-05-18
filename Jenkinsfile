@@ -1,14 +1,21 @@
 pipeline {
-  agent {
-     dockerfile true
-  }
-  stages {
-    stage('Compile Stage') {
-            steps {
-                sh 'mvn clean install -DskipTests'
-//                 sh 'echo $PWD'
-          }
-    }
+    agent any
 
-  }
+    stages {
+        stage('Build') {
+            steps {
+                echo 'Building..'
+            }
+        }
+        stage('Test') {
+            steps {
+                echo 'Testing..'
+            }
+        }
+        stage('Deploy') {
+            steps {
+                echo 'Deploying....'
+            }
+        }
+    }
 }
